@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/svg" href="./imgs/favicon.svg"> -->
+    <meta name="description" content="Lotes lucerna en venta en Sotaquirá Boyacá. Tierra propicia para variados cultivos propios del clima del municipio (papa, ciruela, feijoa, maiz, durazno, haba, uchuva y hortalizas.).">
+    <!-- no olvidar etiqueta og:image para imagen de hipervinculo -->
+    <script defer src="mail.js" ></script>
+    <link rel="stylesheet" href="./styles.css" >
+    <title>Lotes Lucerna en venta</title>
+</head>
+<body>
+    <header>
+        <h1>Lote en venta</h1>
+        <p>Sotaquirá - Boyacá</p>
+    </header>
+    <main>
+        <div class="whatsapp-btn">
+            <a href=" https://wa.me/573115933542?text=Hola,%20me%20interesa%20el%20lote%20que%20estás%20vendiendo" target="_blank" rel="noreferrer noopener">
+                <p>Contáctame</p>
+                <img src="./imgs/whatsapp.png" alt="boton de whatsapp para contacto" />
+            </a>
+        </div>
+        <div class="hero-property">
+            <article class="property-features">
+                <ul>
+                    <li>Vereda Bosigas Norte</li>
+                    <li>Al sur de Paipa, y al norte de Cómbita</li>
+                    <li>A 3 hrs de Bogotá</li>
+                </ul>
+            </article>
+        </div>
+        <section>
+            <article class="article-one">
+                <p>Este es un lote esquinero con amplias vías de acceso.</p>
+                <div class="two-pictures_container">
+                    <div class="img-one"></div>
+                    <div class="img-two"><span class="photo-title">Esquina del lote</span></div>
+                </div>
+                <p>Toda la tierra de este lote es propicia para variados cultivos propios del clima del municipio (papa, ciruela, feijoa, maiz, durazno, haba, uchuva y hortalizas.)</p>
+            </article>
+            <article class="article-two">
+                <div class="img-three"><span class="photo-title">Vista desde la parte superior del lote</span></div>
+                <p>Maravillosas vistas de gran parte del municipio desde la ubicación.</p>
+                <div class="two-pictures_container">
+                    <div class="img-seven"><span class="photo-title">Parte superior del lote</span></div>
+                    <div class="img-eight"><span class="photo-title">Parte superior del lote</span></div>
+                </div>
+                <p>Disfruta de la naturaleza, la tranquilidad y el aire puro que te ofrece esta ubicación alejada de urbanizaciones.</p>
+                <div class="two-pictures_container">
+                    <div class="img-four"><span class="photo-title">Parte media del lote</span></div>
+                    <div class="img-five"><span class="photo-title">Parte inferior del lote</span></div>
+                </div>
+                <p>Hermosos paisajes naturales  cerca de la ubicación para hacer senderismo (Cascada el chorro de la vieja, el Cerro de Santo Eccehomo, Laguna Rica, Laguna Negra, Alto de San Antonio, Cerro de San Nicolás, Alto de las Cruces y Montaña de Palermo).</p>
+                <p>A 10 min del pueblo del Municipio de Sotaquirá en auto, y a 15 minutos de ciudades principales como Paipa.</p>
+                <div class="img-six"><span class="photo-title">Vista aérea del lote (foto google maps)</span></div>
+                <p>Coordenadas de la ubicación: 5°44'06.2"N 73°13'59.8"W </p>
+            </article>
+        </section>
+        <section class="form-section">
+            <h2 class="title-two">¿Te gusta?</h2>
+            <p>Escribeme a tráves del siguiente formulario o del botón de whatsapp, y te responderé lo antes posible.</p>
+            <form id="contact-form" action="https://formsubmit.co/ajax/ea4c9daa5875af90f47bf9c9945bc8b1" method="POST">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="name" placeholder="Tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <input type="email" name="email" placeholder="Tu correo"  pattern="^[a-z0-9_]+(\.[a-z0-9_]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <textarea name="message" placeholder="Tu mensaje" cols="30" rows="8"></textarea>
+                <button id="send-mail" type="submit">Enviar</button>
+           </form>
+           <div class="modal-sent"></div>
+        </section>
+    </main>
+</body>
+</html>

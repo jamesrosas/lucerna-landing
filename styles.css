@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Thasadith:ital,wght@0,700;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --green-lt: #b1ffb94a;
+    --green-neutro: #37AC43;
+    --green-dk: #277C30;
+    --carter-font: 'Carter One', cursive;
+    --p-font: 'Thasadith', sans-serif;
+    --shadow: 2px 2px 2px #8080804d;
+}
+
+main {
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    background-color: var(--green-dk);
+    padding: 1rem;
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+header h1 , header p{
+    font-family: var(--carter-font);
+    color: white;
+}
+
+header h1 {
+    font-size: 35px;
+}
+
+header p{
+    font-size: 25px;
+}
+
+article, .form-section, form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+small {
+    opacity: 0;
+}
+
+h2, p , img {
+    z-index: 5;
+}
+
+.photo-title {
+    background-color: white;
+    font-family: var(--p-font);
+    font-size: 15px;
+    padding: 5px;
+    color: var(--green-dk);
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.two-pictures_container{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+    /* border: 1px solid red; */
+}
+.img-one, .img-two , .img-four, .img-five , .img-seven , .img-eight{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 350px;
+    border-radius: 10px;
+    z-index: 10;
+}
+.img-one{
+    background-image: url("./imgs/esquina-lote.jpg");
+}
+.img-two {
+    background-image: url("./imgs/esquina-del-lote.jpg");
+    margin-top: 3rem;
+}
+
+.img-three {
+    width: 70%;
+    height: 500px;
+    background-image: url("./imgs/vista-completa.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.img-three, .img-six {
+    margin: 2rem 0;
+}
+
+.img-four {
+    background-image: url("./imgs/parte-media.jpg");
+}
+
+.img-five {
+    background-image: url("./imgs/parte-inferior.jpg");
+    margin-top: 3rem;
+}
+
+.img-six {
+    width: 70%;
+    height: 700px;
+    background-image: url("./imgs/medidas-lote-vista-area-google-maps.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+    border-radius: 10px; 
+}
+
+.img-seven {
+    background-image: url("./imgs/lote-lucerna-mitad.jpg");
+}
+
+.img-eight {
+    background-image: url("./imgs/lote-lucerna.jpg");
+    margin-top: 3rem;
+}
+
+.two-pictures_container img:nth-child(2){
+    margin-top: 2rem;
+}
+
+.article-one, .article-two{
+    position: relative;
+    overflow-x: clip;
+}
+
+.article-one::before{
+    content: "";
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: -8rem;
+    right: -8rem;
+    background-color: var(--green-lt);
+    border-radius: 50%;
+    z-index: -5;
+}
+.article-two::before{
+    content: "";
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 6rem;
+    left: -24rem;
+    background-color: var(--green-lt);
+    border-radius: 50%;
+    z-index: 1;
+}
+.form-section{
+    position: relative;
+    margin-bottom: 6rem;
+    overflow-x: clip;
+}
+.form-section::before{
+    content: "";
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: -5rem;
+    left: -42rem;
+    background-color: var(--green-lt);
+    border-radius: 50%;
+    z-index: 1;
+}
+.form-section form {
+    width: 80%;
+    z-index: 10;
+}
+
+.form-section form input, .form-section form textarea{
+    width: 370px;
+    font-family: var(--p-font);
+    font-size: 1.8rem;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 1px solid grey;
+    outline-color: var(--green-neutro);
+    caret-color: var(--green-neutro);
+    box-shadow: var(--shadow);
+}
+
+
+#send-mail{
+    width: fit-content;
+    font-family: var(--carter-font);
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-top: 2rem;
+    color: #ffffff;
+    background-color: var(--green-neutro);
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--shadow);
+    z-index: 5;
+}
+
+
+.modal-sent{
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    color: var(--green-neutro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30rem;
+    z-index: 10;
+    border: 1px solid grey;
+    display: none;
+    background-color: var(--green-neutro);
+    box-shadow: var(--shadow);
+}
+
+.check {
+    font-size: 30px;
+    margin-top: -2rem;
+    color: #ffffff;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 0 10px;
+}
+/* .modal-sent p{
+    font-family: var(--carter-font);
+    font-size: 25px;
+    color: #ffffff;
+    width: fit-content;
+} */
+
+#p-modal {
+    font-family: var(--carter-font);
+    font-size: 25px;
+    color: #ffffff;
+    width: fit-content;
+}
+
+.modal-show {
+    display: flex;
+    animation: show 3s forwards 1; 
+}
+
+#loader {
+    width: 50px;
+    height: 50px;
+    border-left: 2px solid #ffffff;
+    border-radius: 50%; 
+    animation: rotate  500ms infinite;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.title-two {
+    font-family: var(--carter-font);
+    font-size: 3rem;
+    color: var(--green-neutro);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+article p, .form-section p {
+    width: 700px;
+    margin: 2rem auto;
+    font-family: var(--p-font);
+    font-size: 2.2rem;
+    color: #000000;
+    text-align: center;
+}
+article img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.hero-property {
+    background-image: url("./imgs/cabecera-lote.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+.property-features{
+    width: 250px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+.property-features h2 {
+    font-family: var(--carter-font);
+    font-size: 25px;
+    color: var(--green-neutro);
+    margin-bottom: 1rem;
+}
+.property-features ul li {
+    font-family: var(--p-font);
+    font-size: 1.8rem;
+    color: #000000;
+    /* list-style: circle; */
+    margin-left: 1.5rem;
+}
+
+.property-price{
+    display: flex;
+    font-family: var(--carter-font);
+    font-size: 30px;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    background-color: var(--green-dk);
+    color: #ffffff;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.whatsapp-btn{
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    z-index: 50;
+}
+
+.whatsapp-btn a img{
+    width: 70px;
+    height: 70px;
+}
+.whatsapp-btn a {
+    text-decoration: none;
+}
+.whatsapp-btn a p {
+    font-family: var(--p-font);
+    font-size: 12px;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1.3px solid #80808047;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    article p, .form-section p {
+        width: 70%;
+    }
+    .article-one::before{
+        content: "";
+        width: 500px;
+        height: 500px;
+        right: -20rem;
+    }
+}
+
+@media (max-width: 500px){
+
+    header {
+        left: 1rem;
+    }
+
+    .property-features{
+        left: 1rem;
+        bottom: 1rem;
+    }
+    .property-price{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .whatsapp-btn {
+        right: 0.5rem;
+    }
+
+    article img {
+        width: 95%;
+    }
+
+    .img-three, .img-six {
+        width: 80%;
+    }
+    .img-six {
+        height: 350px;
+    }
+
+    .form-section form input , .form-section form textarea{
+        width: 90%;
+    }
+
+}
