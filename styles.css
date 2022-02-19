@@ -8,6 +8,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -21,6 +22,7 @@ html {
 
 main {
     position: relative;
+    overflow: clip;
 }
 
 header {
@@ -75,16 +77,94 @@ h2, p , img {
     font-style: italic;
 }
 
-.two-pictures_container{
-    width: 80%;
+.cards-relative_container {
+    position: relative;
+    width: 100%;
     height: fit-content;
+    /* border: 1px solid blue; */
+    margin-top: -12rem;
+}
+
+.lots-cards_container {
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid red; */
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    gap: 2rem;
     justify-content: space-evenly;
-    margin: 2rem auto;
-    /* border: 1px solid red; */
 }
+.lots-cards_container a {
+    text-decoration: none;
+    color: #000000;
+}
+.lot-card {
+    max-width: 350px;
+    height: 230px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: white;
+    overflow: clip;
+    box-shadow: 2px 2px 8px rgba(128, 128, 128, 0.705);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 350ms;
+}
+.lot-card:hover {
+    transform: scale(1.1);
+}
+.lot-card h2 {
+    width: 100%;
+    background-color: #277C30;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--carter-font);
+}
+
+.lot-card .price-container {
+    width: 100%;
+    margin: 3rem 0;
+    font-size: 2.5rem;
+    font-family: var(--carter-font);
+    color: #277C30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lot-card .go-to_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 2rem;
+    font-family: var(--p-font);
+}
+.go-to_container .iconify {
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+.link-container {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    color: white;
+    background: #277C30;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+
 .img-one, .img-two , .img-four, .img-five , .img-seven , .img-eight{
     background-position: center;
     background-repeat: no-repeat;
@@ -105,7 +185,7 @@ h2, p , img {
 .img-three {
     width: 70%;
     height: 500px;
-    background-image: url("./imgs/vista-completa.jpg");
+    background-image: url("./imgs/vista-completa-lote.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,13 +208,30 @@ h2, p , img {
 
 .img-six {
     width: 70%;
-    height: 700px;
-    background-image: url("./imgs/medidas-lote-vista-area-google-maps.png");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 10;
+    position: relative;
     border-radius: 10px; 
+    z-index: 10;
+}
+.img-six img {
+    object-fit: contain;
+    width: 100%;
+}
+#lot-mobile_img{
+    display: none;
+}
+.img-six span{
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    background: white;
+    border: 1px solid grey;
+    color: #277C30;
+    width: fit-content;
+    padding: .5rem;
+    border-radius: 5px;
+    font-style: italic;
+    font-family: var(--p-font);
+    font-size: 1.6rem;
 }
 
 .img-seven {
@@ -146,13 +243,15 @@ h2, p , img {
     margin-top: 3rem;
 }
 
-.two-pictures_container img:nth-child(2){
-    margin-top: 2rem;
-}
-
 .article-one, .article-two{
     position: relative;
     overflow-x: clip;
+}
+.article-one {
+    margin-top: 5rem;
+}
+.article-one p strong {
+    color: #0c8018;
 }
 
 .article-one::before{
@@ -176,11 +275,44 @@ h2, p , img {
     background-color: var(--green-lt);
     border-radius: 50%;
     z-index: 1;
+}.article-two {
+    border-top: 8px dotted var(--green-dk);
+    padding-top: 2rem;
 }
+
+.lot-container {
+    width: 70%;
+    margin: 5rem auto;
+}
+.lot-container .h2-container {
+    width: 100%;
+    height: fit-content;
+    border-bottom: 5px double green;
+    margin-bottom: 2rem;
+    /* border: 1px solid red; */
+}
+.lot-container h2 {
+    align-self: flex-start;
+    font-size: 4rem;
+    font-family: var(--carter-font);
+    background: #0c8018;
+    color: white;
+    padding: 0 8px;
+    border-radius: 5px 5px 0 0;
+    width: fit-content;
+}
+.measures-photo{
+    width: 80% !important;
+}
+.lot-container img {
+    width: 100%;
+    margin: .5rem 0;
+}
+
 .form-section{
     position: relative;
-    margin-bottom: 6rem;
     overflow-x: clip;
+    padding-bottom: 6rem;
 }
 .form-section::before{
     content: "";
@@ -337,38 +469,22 @@ article img {
 }
 .property-features{
     width: 250px;
-    background-color: #ffffff;
+    background-color: #000000b3;
+    backdrop-filter: blur(20px);
     position: absolute;
-    bottom: 2rem;
+    top: 12rem;
     left: 2rem;
+    height: fit-content;
     padding: 2rem;
     border-radius: 0.5rem;
 }
-.property-features h2 {
-    font-family: var(--carter-font);
-    font-size: 25px;
-    color: var(--green-neutro);
-    margin-bottom: 1rem;
-}
+
 .property-features ul li {
     font-family: var(--p-font);
     font-size: 1.8rem;
-    color: #000000;
+    color: #ffffff;
     /* list-style: circle; */
     margin-left: 1.5rem;
-}
-
-.property-price{
-    display: flex;
-    font-family: var(--carter-font);
-    font-size: 30px;
-    width: fit-content;
-    height: fit-content;
-    padding: 1rem;
-    background-color: var(--green-dk);
-    color: #ffffff;
-    margin-top: 1rem;
-    margin-bottom: 5rem;
 }
 
 .whatsapp-btn{
@@ -398,6 +514,72 @@ article img {
     text-align: center;
 }
 
+footer {
+    padding: 1rem;
+    background: #277C30;
+    /* margin-top: 2rem; */
+}
+
+footer p {
+    font-size: 2rem;
+    font-family: var(--p-font);
+    color: white;
+}
+
+
+@media (max-width: 1289px) {
+    .cards-relative_container {
+        margin-top: -7rem;
+    }
+    .lot-card {
+        width: 280px;
+        height: 200px;
+        font-size: 2.5rem !important;
+    }
+    .lot-card h2 {
+        font-size: 2.5rem;
+    }
+    .lot-card .price-container {
+        font-size: 2.5rem;
+    }
+    .lot-card .go-to_container p {
+        font-size: 2rem;
+    }
+    .lot-card .go-to_container .iconify{
+        font-size: 3rem;
+    }
+
+    .img-six {
+        background-size: contain;
+    }
+}
+@media (min-width: 1290px) {
+
+    article p, .form-section p {
+        font-size: 2.5rem; 
+        width: 60%;
+    } 
+
+    .lot-card {
+        width: 400px;
+        height: 300px;
+        font-size: 3.5rem !important;
+    }
+    .lot-card h2 {
+        font-size: 3.5rem;
+    }
+    .lot-card .price-container {
+        font-size: 3.5rem;
+    }
+    .lot-card .go-to_container p {
+        font-size: 2.5rem;
+    }
+    .lot-card .go-to_container .iconify{
+        font-size: 5rem;
+    }
+}
+
+
 @media (max-width: 800px) {
     article p, .form-section p {
         width: 70%;
@@ -420,9 +602,32 @@ article img {
         left: 1rem;
         bottom: 1rem;
     }
-    .property-price{
+
+    .cards-relative_container {
+        margin-top: -7rem;
+    }
+    
+    .lot-card {
+        width: 75%;
+        width: 280px;
+        height: 220px;
+    }
+
+    .lot-container {
+        width: 90%;
+        margin-top: 5rem;
+    }
+
+    .lot-container img {
+        width: 100%;
+    }
+
+    #lot-desktop_img {
+        display: none;
+    }
+
+    #lot-mobile_img{
         display: flex;
-        flex-direction: column;
     }
 
     .whatsapp-btn {
@@ -434,10 +639,7 @@ article img {
     }
 
     .img-three, .img-six {
-        width: 80%;
-    }
-    .img-six {
-        height: 350px;
+        width: 90%;
     }
 
     .form-section form input , .form-section form textarea{
