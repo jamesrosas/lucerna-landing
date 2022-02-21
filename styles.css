@@ -113,7 +113,7 @@ h2, p , img {
     transition: 350ms;
 }
 .lot-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 .lot-card h2 {
     width: 100%;
@@ -288,7 +288,7 @@ h2, p , img {
     width: 100%;
     height: fit-content;
     border-bottom: 5px double green;
-    margin-bottom: 2rem;
+    margin:  1rem 0 2rem 0;
     /* border: 1px solid red; */
 }
 .lot-container h2 {
@@ -300,6 +300,10 @@ h2, p , img {
     padding: 0 8px;
     border-radius: 5px 5px 0 0;
     width: fit-content;
+}
+.lot-container p strong {
+    font-family: var(--carter-font);
+    color: #277C30;
 }
 .measures-photo{
     width: 80% !important;
@@ -313,6 +317,7 @@ h2, p , img {
     position: relative;
     overflow-x: clip;
     padding-bottom: 6rem;
+    margin-top: 5rem;
 }
 .form-section::before{
     content: "";
@@ -576,6 +581,17 @@ footer p {
     }
     .lot-card .go-to_container .iconify{
         font-size: 5rem;
+    }
+    .form-section form input, .form-section form textarea {
+        font-size: 2.1rem;
+    }
+
+    .whatsapp-btn a img {
+        width: 100px;
+        height: 100px;
+    }
+    .whatsapp-btn a p {
+        font-size: 1.8rem;
     }
 }
 
